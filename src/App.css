@@ -1,0 +1,363 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #0a0a0a;
+  color: #ffffff;
+}
+
+.app {
+  min-height: 100vh;
+  background: #0a0a0a;
+}
+
+.app-header {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  padding: 20px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.app-header h1 {
+  color: #ffffff;
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  color: #a8d8ea;
+  font-size: 0.85rem;
+}
+
+.app-main {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.calendar-container {
+  flex: 3;
+  background: #1a1a2e;
+  border-radius: 20px;
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar {
+  flex: 1;
+  background: #1a1a2e;
+  border-radius: 20px;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  height: fit-content;
+}
+
+.sidebar h2 {
+  color: #ffffff;
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.today-date {
+  color: #a8d8ea;
+  font-size: 0.8rem;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.no-tasks {
+  color: #666;
+  text-align: center;
+  padding: 30px 20px;
+  font-size: 0.85rem;
+}
+
+.tasks-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  background: #0f0f23;
+  border-radius: 12px;
+  margin-bottom: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.task-item.completed {
+  opacity: 0.6;
+  background: rgba(16, 185, 129, 0.1);
+  border-left: 3px solid #10b981;
+}
+
+.task-time {
+  min-width: 55px;
+  padding: 4px 8px;
+  background: #1a1a2e;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  color: #a8d8ea;
+  text-align: center;
+}
+
+.task-title {
+  flex: 1;
+  font-size: 0.85rem;
+  color: #ffffff;
+}
+
+.task-item.completed .task-title {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.task-energy {
+  font-size: 1rem;
+}
+
+.task-actions {
+  display: flex;
+  gap: 6px;
+}
+
+.complete-btn, .delete-btn {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 4px 6px;
+  border-radius: 8px;
+}
+
+.complete-btn:hover {
+  background: rgba(16, 185, 129, 0.2);
+}
+
+.delete-btn:hover {
+  background: rgba(239, 68, 68, 0.2);
+}
+
+/* Модальное окно */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.modal {
+  background: #1a1a2e;
+  border-radius: 24px;
+  width: 90%;
+  max-width: 400px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.modal-header h3 {
+  color: #ffffff;
+  margin: 0;
+}
+
+.modal-header button {
+  background: none;
+  border: none;
+  color: #888;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.modal-body {
+  padding: 20px;
+}
+
+.modal-body input {
+  width: 100%;
+  padding: 12px 16px;
+  background: #0f0f23;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  color: #ffffff;
+  font-size: 1rem;
+  margin-bottom: 16px;
+}
+
+.modal-body input::placeholder {
+  color: #555;
+}
+
+.modal-row {
+  margin-bottom: 16px;
+}
+
+.modal-row label {
+  display: block;
+  color: #a8d8ea;
+  margin-bottom: 8px;
+  font-size: 0.85rem;
+}
+
+.modal-row input {
+  margin-bottom: 0;
+}
+
+.energy-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.energy-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  background: #0f0f23;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.energy-btn.active {
+  transform: scale(1.05);
+  border-color: currentColor;
+}
+
+.modal-footer {
+  display: flex;
+  gap: 12px;
+  padding: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.add-btn {
+  flex: 1;
+  padding: 12px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  border-radius: 40px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.cancel-btn {
+  flex: 1;
+  padding: 12px;
+  background: #2a2a3e;
+  border: none;
+  border-radius: 40px;
+  color: #ccc;
+  cursor: pointer;
+}
+
+/* FullCalendar настройки */
+.fc {
+  background: #1a1a2e;
+}
+
+.fc-toolbar-title {
+  color: #ffffff !important;
+}
+
+.fc-button-primary {
+  background: #0f0f23 !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  color: #a8d8ea !important;
+}
+
+.fc-button-primary:hover {
+  background: #1a1a2e !important;
+  border-color: #667eea !important;
+}
+
+.fc-daygrid-day-number {
+  color: #a8d8ea !important;
+}
+
+.fc-col-header-cell-cushion {
+  color: #ffffff !important;
+}
+
+.fc-day-today {
+  background: rgba(102, 126, 234, 0.1) !important;
+}
+
+.fc-timegrid-slot-label {
+  color: #888 !important;
+}
+
+.fc-timegrid-now-indicator-line {
+  border-color: #ef4444 !important;
+}
+
+.fc-event {
+  cursor: pointer;
+  border-radius: 8px !important;
+  font-size: 0.75rem;
+}
+
+@media (max-width: 768px) {
+  .app-main {
+    flex-direction: column;
+  }
+  
+  .sidebar {
+    display: none;
+  }
+  
+  .fc .fc-toolbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+.mobile-fab {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 200;
+}
+
+.mobile-fab button {
+  width: 56px;
+  height: 56px;
+  border-radius: 56px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.1s;
+}
+
+.mobile-fab button:active {
+  transform: scale(0.95);
+}

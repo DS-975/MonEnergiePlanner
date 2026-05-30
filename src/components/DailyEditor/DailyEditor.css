@@ -1,0 +1,74 @@
+/* ... предыдущие стили ... */
+
+/* Новая временная сетка */
+.time-grid {
+  margin-bottom: 28px;
+  padding: 16px;
+  background: rgba(15, 15, 35, 0.6);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.time-grid h3 {
+  margin: 0 0 16px 0;
+  font-size: 0.9rem;
+  color: #a8d8ea;
+  text-align: center;
+}
+
+.time-slots-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  max-height: 300px;
+  overflow-y: auto;
+  padding: 8px;
+}
+
+.time-slot-pair {
+  display: flex;
+  gap: 4px;
+}
+
+.time-slot-drop {
+  flex: 1;
+  padding: 10px;
+  background: #1a1a2e;
+  border: 1px dashed rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.time-slot-drop:hover {
+  background: #667eea;
+  border-color: #667eea;
+  transform: scale(1.02);
+}
+
+.hour-slot {
+  flex: 2;
+}
+
+.half-slot {
+  flex: 1;
+}
+
+.time-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #888;
+}
+
+.time-label-half {
+  font-size: 0.7rem;
+  color: #666;
+}
+
+.time-slot-drop:hover .time-label,
+.time-slot-drop:hover .time-label-half {
+  color: white;
+}
+
+/* Остальные стили сохраняются */

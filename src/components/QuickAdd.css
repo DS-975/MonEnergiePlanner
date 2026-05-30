@@ -1,0 +1,117 @@
+.quick-add-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3000;
+}
+
+.quick-add {
+  background: #1a1a2e;
+  border-radius: 28px;
+  padding: 24px;
+  width: 90%;
+  max-width: 400px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  animation: slideUp 0.2s ease;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.quick-add-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  color: #a8d8ea;
+  font-size: 0.9rem;
+}
+
+.quick-add-header button {
+  background: none;
+  border: none;
+  color: #888;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.quick-add input {
+  width: 100%;
+  padding: 14px;
+  background: #0f0f23;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  color: white;
+  font-size: 1rem;
+  margin-bottom: 16px;
+}
+
+.quick-add-controls {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.quick-add-controls input {
+  width: auto;
+  flex: 1;
+  margin-bottom: 0;
+}
+
+.energy-buttons {
+  display: flex;
+  gap: 6px;
+}
+
+.energy-buttons button {
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  background: #0f0f23;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 44px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.energy-buttons button.active {
+  background: #667eea;
+  border-color: #667eea;
+}
+
+.quick-add button:last-child {
+  flex: 1;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 44px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  .quick-add {
+    width: 95%;
+    padding: 20px;
+  }
+  
+  .energy-buttons button {
+    width: 38px;
+    height: 38px;
+    font-size: 1rem;
+  }
+}
