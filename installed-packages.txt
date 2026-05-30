@@ -1,0 +1,32 @@
+monenergie-planner@1.0.0 /home/ds/Рабочий стол/PROJECTS/Startup/MonEnergiePlanner
+├── @dnd-kit/core@6.3.1
+├── @dnd-kit/sortable@10.0.0
+├── @dnd-kit/utilities@3.2.2
+├── @eslint/js@10.0.1
+├── @fullcalendar/daygrid@6.1.20
+├── @fullcalendar/interaction@6.1.20
+├── @fullcalendar/react@6.1.20
+├── @fullcalendar/timegrid@6.1.20
+├── @react-aria/interactions@3.28.1
+├── @react-aria/overlays@3.32.1
+├── @types/node@24.12.4
+├── @types/react-dom@19.2.3
+├── @types/react@19.2.15
+├── @vitejs/plugin-react@6.0.2
+├── autoprefixer@10.5.0
+├── dexie@4.4.3
+├── eslint-plugin-react-hooks@7.1.1
+├── eslint-plugin-react-refresh@0.5.2
+├── eslint@10.4.1
+├── globals@17.6.0
+├── lucide-react@1.17.0
+├── postcss@8.5.15
+├── react-dom@19.2.6
+├── react-hot-toast@2.6.0
+├── react@19.2.6
+├── tailwindcss@4.3.0
+├── typescript-eslint@8.60.0
+├── typescript@6.0.3
+├── vite@8.0.14
+└── zustand@5.0.14
+
