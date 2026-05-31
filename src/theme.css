@@ -1,3 +1,6 @@
+/* Подключаем шрифт Comfortaa */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+
 /* ============================================
    ТЕМА 1: ТЁМНАЯ
    ============================================ */
@@ -49,13 +52,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Comfortaa', sans-serif;
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   background: var(--bg-primary);
   color: var(--text-primary);
   transition: all 0.3s ease;
+  font-family: 'Comfortaa', sans-serif;
 }
 
 .app {
@@ -86,11 +90,15 @@ body {
   color: var(--text-primary);
   font-size: 1.5rem;
   margin-bottom: 4px;
+  font-family: 'Comfortaa', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.5px;
 }
 
 .subtitle {
   color: var(--text-muted);
   font-size: 0.75rem;
+  font-family: 'Comfortaa', sans-serif;
 }
 
 .theme-switch {
@@ -112,6 +120,7 @@ body {
   background: transparent;
   color: var(--text-muted);
   transition: all 0.2s;
+  font-family: 'Comfortaa', sans-serif;
 }
 
 .theme-btn.active {
@@ -153,6 +162,7 @@ body {
   color: var(--text-primary);
   font-size: 1.1rem;
   margin-bottom: 8px;
+  font-family: 'Comfortaa', sans-serif;
 }
 
 .today-date {
@@ -161,6 +171,7 @@ body {
   margin-bottom: 16px;
   padding-bottom: 8px;
   border-bottom: 1px solid var(--border);
+  font-family: 'Comfortaa', sans-serif;
 }
 
 .no-tasks {
@@ -168,6 +179,7 @@ body {
   text-align: center;
   padding: 20px;
   font-size: 0.8rem;
+  font-family: 'Comfortaa', sans-serif;
 }
 
 .tasks-list {
@@ -201,12 +213,14 @@ body {
   font-size: 0.65rem;
   color: var(--text-secondary);
   text-align: center;
+  font-family: 'Comfortaa', sans-serif;
 }
 
 .task-title {
   flex: 1;
   font-size: 0.8rem;
   color: var(--text-primary);
+  font-family: 'Comfortaa', sans-serif;
 }
 
 .task-item.completed .task-title {
@@ -216,192 +230,121 @@ body {
 
 .task-energy {
   font-size: 0.9rem;
+  font-family: 'Comfortaa', sans-serif;
+}
+
+.sidebar-tip {
+  margin-top: 24px;
+  padding: 12px;
+  background: var(--bg-tertiary);
+  border-radius: 12px;
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  border-left: 3px solid var(--accent-light);
+  font-family: 'Comfortaa', sans-serif;
 }
 
 /* ============================================
-   FULLCALENDAR - ТЁМНАЯ ТЕМА
+   FULLCALENDAR СТИЛИ
    ============================================ */
-.theme-dark .fc {
+.fc {
   background: var(--bg-secondary);
+  font-family: 'Comfortaa', sans-serif !important;
 }
 
-.theme-dark .fc-toolbar-title {
-  color: #ffffff !important;
+.fc .fc-toolbar-title {
+  color: var(--text-primary) !important;
   font-weight: 600 !important;
   font-size: 1.2rem !important;
+  font-family: 'Comfortaa', sans-serif !important;
 }
 
-.theme-dark .fc-button-primary {
-  background: #3b3b4d !important;
-  border-color: #4a4a5e !important;
-  color: #e0e0e0 !important;
+.fc .fc-button-primary {
+  background: var(--bg-tertiary) !important;
+  border-color: var(--border) !important;
+  color: var(--text-secondary) !important;
+  font-family: 'Comfortaa', sans-serif !important;
+  border-radius: 40px !important;
 }
 
-.theme-dark .fc-button-primary:hover {
-  background: #4a4a5e !important;
-  border-color: #818cf8 !important;
-  color: #ffffff !important;
+.fc .fc-button-primary:hover {
+  background: var(--accent) !important;
+  border-color: var(--accent) !important;
+  color: white !important;
 }
 
-.theme-dark .fc-col-header-cell {
-  background: #2d2d3d !important;
+.fc .fc-col-header-cell {
+  background: var(--bg-tertiary) !important;
   padding: 8px 0 !important;
 }
 
-.theme-dark .fc-col-header-cell-cushion {
-  color: #a8d8ea !important;
+.fc .fc-col-header-cell-cushion {
+  color: var(--text-secondary) !important;
   font-weight: 600 !important;
   font-size: 0.85rem !important;
+  font-family: 'Comfortaa', sans-serif !important;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-.theme-dark .fc-daygrid-day-number {
-  color: #cbd5e1 !important;
+.fc .fc-daygrid-day-number {
+  color: var(--text-secondary) !important;
   font-weight: 500 !important;
   font-size: 0.85rem !important;
+  font-family: 'Comfortaa', sans-serif !important;
 }
 
-/* СЕГОДНЯШНЯЯ ДАТА - ЗАМЕТНАЯ */
-.theme-dark .fc-day-today {
-  background: var(--today-bg) !important;
-  border: 2px solid #818cf8 !important;
-  border-radius: 8px !important;
-}
-
-.theme-dark .fc-day-today .fc-daygrid-day-number {
-  color: #ffffff !important;
-  font-weight: bold !important;
-  background: #6366f1 !important;
-  padding: 2px 6px !important;
-  border-radius: 20px !important;
-  display: inline-block !important;
-  margin: 2px !important;
-}
-
-.theme-dark .fc-timegrid-col.fc-day-today {
-  background: var(--today-bg) !important;
-}
-
-.theme-dark .fc-timegrid-now-indicator-line {
-  border-color: #f59e0b !important;
-  border-width: 2px !important;
-}
-
-.theme-dark .fc-event {
-  cursor: pointer;
-  border-radius: 6px !important;
-  font-size: 0.7rem !important;
-  padding: 2px 4px !important;
-}
-
-.theme-dark .fc-event-title {
-  color: #ffffff !important;
-  font-weight: 500 !important;
-}
-
-.theme-dark .fc-day-other .fc-daygrid-day-number {
-  color: #6b7280 !important;
-}
-
-.theme-dark .fc-scrollgrid {
-  border-color: #3b3b4d !important;
-}
-
-.theme-dark .fc-scrollgrid-section th,
-.theme-dark .fc-scrollgrid-section td {
-  border-color: #3b3b4d !important;
-}
-
-/* ============================================
-   FULLCALENDAR - СВЕТЛАЯ ТЕМА
-   ============================================ */
-.theme-light .fc {
-  background: var(--bg-secondary);
-}
-
-.theme-light .fc-toolbar-title {
-  color: #1f2937 !important;
-  font-weight: 600 !important;
-  font-size: 1.2rem !important;
-}
-
-.theme-light .fc-button-primary {
-  background: #e5e7eb !important;
-  border-color: #d1d5db !important;
-  color: #374151 !important;
-}
-
-.theme-light .fc-button-primary:hover {
-  background: #d1d5db !important;
-  border-color: #3b82f6 !important;
-  color: #1f2937 !important;
-}
-
-.theme-light .fc-col-header-cell {
-  background: #f3f4f6 !important;
+.fc .fc-daygrid-day-top {
+  justify-content: center !important;
+  display: flex !important;
   padding: 8px 0 !important;
 }
 
-.theme-light .fc-col-header-cell-cushion {
-  color: #374151 !important;
-  font-weight: 700 !important;
-  font-size: 0.85rem !important;
-}
-
-.theme-light .fc-daygrid-day-number {
-  color: #4b5563 !important;
-  font-weight: 500 !important;
-  font-size: 0.85rem !important;
-}
-
-/* СЕГОДНЯШНЯЯ ДАТА - ЗАМЕТНАЯ */
-.theme-light .fc-day-today {
+.fc .fc-day-today {
   background: var(--today-bg) !important;
-  border: 2px solid #3b82f6 !important;
-  border-radius: 8px !important;
+  border: 2px solid var(--accent-light) !important;
+  border-radius: 12px !important;
 }
 
-.theme-light .fc-day-today .fc-daygrid-day-number {
-  color: #ffffff !important;
-  font-weight: bold !important;
-  background: #3b82f6 !important;
-  padding: 2px 6px !important;
-  border-radius: 20px !important;
+.fc .fc-day-today .fc-daygrid-day-number {
+  background: var(--accent-light) !important;
+  color: white !important;
+  border-radius: 30px !important;
+  padding: 2px 10px !important;
   display: inline-block !important;
-  margin: 2px !important;
 }
 
-.theme-light .fc-timegrid-col.fc-day-today {
-  background: var(--today-bg) !important;
+.fc .fc-timegrid-slot-label-cushion {
+  font-family: 'Comfortaa', sans-serif !important;
+  font-size: 0.7rem;
 }
 
-.theme-light .fc-timegrid-now-indicator-line {
-  border-color: #ef4444 !important;
+.fc .fc-timegrid-now-indicator-line {
+  border-color: var(--warning) !important;
   border-width: 2px !important;
 }
 
-.theme-light .fc-event {
+.fc-event {
   cursor: pointer;
-  border-radius: 6px !important;
+  border-radius: 12px !important;
   font-size: 0.7rem !important;
-  padding: 2px 4px !important;
-}
-
-.theme-light .fc-event-title {
-  color: #ffffff !important;
+  padding: 4px 8px !important;
+  font-family: 'Comfortaa', sans-serif !important;
   font-weight: 500 !important;
 }
 
-.theme-light .fc-day-other .fc-daygrid-day-number {
-  color: #9ca3af !important;
+.fc-event-title {
+  font-family: 'Comfortaa', sans-serif !important;
 }
 
-.theme-light .fc-scrollgrid {
-  border-color: #e5e7eb !important;
+.fc .fc-scrollgrid {
+  border: none !important;
 }
 
-.theme-light .fc-scrollgrid-section th,
-.theme-light .fc-scrollgrid-section td {
-  border-color: #e5e7eb !important;
+.fc .fc-scrollgrid-section td,
+.fc .fc-scrollgrid-section th {
+  border: 1px solid var(--border) !important;
 }
 
 /* ============================================
@@ -442,6 +385,7 @@ body {
   color: var(--text-primary);
   margin: 0;
   font-size: 1.1rem;
+  font-family: 'Comfortaa', sans-serif;
 }
 
 .modal-header button {
@@ -465,10 +409,12 @@ body {
   color: var(--text-primary);
   font-size: 0.9rem;
   margin-bottom: 14px;
+  font-family: 'Comfortaa', sans-serif;
 }
 
 .modal-body input::placeholder {
   color: var(--text-muted);
+  font-family: 'Comfortaa', sans-serif;
 }
 
 .modal-row {
@@ -480,6 +426,7 @@ body {
   color: var(--text-secondary);
   margin-bottom: 6px;
   font-size: 0.8rem;
+  font-family: 'Comfortaa', sans-serif;
 }
 
 .energy-buttons {
@@ -497,6 +444,7 @@ body {
   font-size: 1.1rem;
   cursor: pointer;
   transition: all 0.2s;
+  font-family: 'Comfortaa', sans-serif;
 }
 
 .energy-btn.active {
@@ -512,7 +460,7 @@ body {
   border-top: 1px solid var(--border);
 }
 
-.add-btn {
+.add-btn, .save-btn {
   flex: 1;
   padding: 10px;
   background: var(--accent);
@@ -521,6 +469,7 @@ body {
   color: white;
   font-weight: 600;
   cursor: pointer;
+  font-family: 'Comfortaa', sans-serif;
 }
 
 .cancel-btn {
@@ -531,83 +480,35 @@ body {
   border-radius: 30px;
   color: var(--text-primary);
   cursor: pointer;
+  font-family: 'Comfortaa', sans-serif;
+}
+
+.delete-btn {
+  flex: 1;
+  padding: 10px;
+  background: var(--danger);
+  border: none;
+  border-radius: 30px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: 'Comfortaa', sans-serif;
+}
+
+.toggle-btn {
+  flex: 1;
+  padding: 10px;
+  background: var(--warning);
+  border: none;
+  border-radius: 30px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: 'Comfortaa', sans-serif;
 }
 
 /* ============================================
    МОБИЛЬНАЯ АДАПТАЦИЯ
-   ============================================ */
-@media (max-width: 768px) {
-  .app-main {
-    flex-direction: column;
-    padding: 12px;
-  }
-  
-  .sidebar {
-    display: none;
-  }
-  
-  .fc .fc-toolbar {
-    flex-direction: column;
-    gap: 8px;
-  }
-  
-  .fc .fc-toolbar-title {
-    font-size: 1rem !important;
-  }
-  
-  .fc .fc-button {
-    padding: 4px 8px !important;
-    font-size: 0.7rem !important;
-  }
-  
-  .header-content {
-    flex-direction: column;
-    text-align: center;
-  }
-  
-  .theme-switch {
-    width: 100%;
-    justify-content: center;
-  }
-  
-  .theme-btn {
-    flex: 1;
-    text-align: center;
-    padding: 6px 12px;
-    font-size: 0.75rem;
-  }
-  
-  .calendar-container {
-    padding: 8px;
-  }
-}
-
-.mobile-fab {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 200;
-}
-
-.mobile-fab button {
-  width: 52px;
-  height: 52px;
-  border-radius: 52px;
-  background: var(--accent);
-  border: none;
-  color: white;
-  font-size: 26px;
-  font-weight: bold;
-  cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  transition: transform 0.1s;
-}
-
-.mobile-fab button:active {
-  transform: scale(0.95);
-}
-/* ============================================
-   МОБИЛЬНЫЕ СТИЛИ
    ============================================ */
 @media (max-width: 768px) {
   .app-header {
@@ -643,7 +544,6 @@ body {
     border-radius: 12px;
   }
   
-  /* Мобильная навигация */
   .mobile-nav {
     position: fixed;
     bottom: 0;
@@ -669,6 +569,7 @@ body {
     font-weight: 500;
     cursor: pointer;
     transition: all 0.2s;
+    font-family: 'Comfortaa', sans-serif;
   }
   
   .mobile-nav-btn.active {
@@ -682,7 +583,6 @@ body {
     font-size: 1.2rem;
   }
   
-  /* Мобильная панель задач */
   .mobile-tasks-panel {
     position: fixed;
     bottom: 70px;
@@ -703,6 +603,7 @@ body {
     font-size: 0.75rem;
     font-weight: 600;
     border-bottom: 1px solid var(--border);
+    font-family: 'Comfortaa', sans-serif;
   }
   
   .mobile-tasks-list {
@@ -730,12 +631,14 @@ body {
     font-size: 0.65rem;
     color: var(--text-secondary);
     text-align: center;
+    font-family: 'Comfortaa', sans-serif;
   }
   
   .mobile-task-title {
     flex: 1;
     font-size: 0.8rem;
     color: var(--text-primary);
+    font-family: 'Comfortaa', sans-serif;
   }
   
   .mobile-task-energy {
@@ -748,46 +651,61 @@ body {
     font-size: 0.7rem;
     color: var(--accent-light);
     border-top: 1px solid var(--border);
+    font-family: 'Comfortaa', sans-serif;
   }
   
-  /* Увеличенные кнопки для пальцев */
   .fc .fc-button {
-    padding: 6px 12px !important;
-    min-height: 36px !important;
-  }
-  
-  .fc .fc-toolbar-title {
-    font-size: 1rem !important;
-  }
-  
-  .fc .fc-timegrid-slot {
-    height: 3.5em !important;
-  }
-  
-  .fc-event {
-    padding: 4px 6px !important;
+    padding: 6px 10px !important;
     font-size: 0.7rem !important;
   }
   
-  .modal {
-    width: 95%;
-    max-width: none;
-    margin: 16px;
+  .fc .fc-toolbar-title {
+    font-size: 0.9rem !important;
   }
   
-  .energy-btn {
-    width: 48px;
-    height: 48px;
-    font-size: 1.2rem;
+  .fc-event {
+    font-size: 0.6rem !important;
   }
 }
-.sidebar-tip {
-  margin-top: 24px;
-  padding: 12px;
-  background: var(--bg-tertiary);
-  border-radius: 12px;
-  font-size: 0.7rem;
-  color: var(--text-muted);
-  line-height: 1.5;
-  border-left: 3px solid var(--accent-light);
+
+.mobile-fab {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 200;
+}
+
+.mobile-fab button {
+  width: 52px;
+  height: 52px;
+  border-radius: 52px;
+  background: var(--accent);
+  border: none;
+  color: white;
+  font-size: 26px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.1s;
+}
+
+.mobile-fab button:active {
+  transform: scale(0.95);
+}
+
+/* Анимации */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
